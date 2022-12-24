@@ -2455,126 +2455,145 @@
 
 // console.log(isPrime(1234));
 
-function humanReadable(number) {
+// function humanReadable(number) {
 
-    a=[]
-    let ontri = Math.floor(number / 10000000000000);
-    number = number % 10000000000000;
-    if (ontri==0) {
-      ontri=''
-    }else{
-      ontri=ontri*10000000000000
-      a.push(ontri)
-    }
-    let tri = Math.floor(number / 1000000000000);
-    number = number % 1000000000000;
-    if (tri==0) {
-      tri=''
-    }else{
-      tri=tri*1000000000000
-      a.push(tri)
-    }
-    let yuzmiliard = Math.floor(number / 100000000000);
-    number = number % 100000000000;
-    if (yuzmiliard==0) {
-      yuzmiliard=''
-    }else{
-      yuzmiliard=yuzmiliard*100000000000
-      a.push(yuzmiliard)
-    }
-    let onmiliard = Math.floor(number / 10000000000);
-    number = number % 10000000000;
-    if (onmiliard==0) {
-      onmiliard=''
-    }else{
-      onmiliard=onmiliard*10000000000
-      a.push(onmiliard)
-    }
-    let miliard = Math.floor(number / 1000000000);
-    number = number % 1000000000;
-    if (miliard==0) {
-      miliard=''
-    }else{
-      miliard=miliard*1000000000
-      a.push(miliard)
-    }
-    let yuzmilion = Math.floor(number / 100000000);
-    number = number % 100000000;
-    if (yuzmilion==0) {
-      yuzmilion=''
-    }else{
-      yuzmilion=yuzmilion*100000000
-      a.push(yuzmilion)
-    }
-    let onmilion = Math.floor(number / 10000000);
-    number = number % 10000000;
-    if (onmilion==0) {
-      onmilion=''
-    }else{
-      onmilion=onmilion*10000000
-      a.push(onmilion)
-    }
+//     a=[]
+//     let ontri = Math.floor(number / 10000000000000);
+//     number = number % 10000000000000;
+//     if (ontri==0) {
+//       ontri=''
+//     }else{
+//       ontri=ontri*10000000000000
+//       a.push(ontri)
+//     }
+//     let tri = Math.floor(number / 1000000000000);
+//     number = number % 1000000000000;
+//     if (tri==0) {
+//       tri=''
+//     }else{
+//       tri=tri*1000000000000
+//       a.push(tri)
+//     }
+//     let yuzmiliard = Math.floor(number / 100000000000);
+//     number = number % 100000000000;
+//     if (yuzmiliard==0) {
+//       yuzmiliard=''
+//     }else{
+//       yuzmiliard=yuzmiliard*100000000000
+//       a.push(yuzmiliard)
+//     }
+//     let onmiliard = Math.floor(number / 10000000000);
+//     number = number % 10000000000;
+//     if (onmiliard==0) {
+//       onmiliard=''
+//     }else{
+//       onmiliard=onmiliard*10000000000
+//       a.push(onmiliard)
+//     }
+//     let miliard = Math.floor(number / 1000000000);
+//     number = number % 1000000000;
+//     if (miliard==0) {
+//       miliard=''
+//     }else{
+//       miliard=miliard*1000000000
+//       a.push(miliard)
+//     }
+//     let yuzmilion = Math.floor(number / 100000000);
+//     number = number % 100000000;
+//     if (yuzmilion==0) {
+//       yuzmilion=''
+//     }else{
+//       yuzmilion=yuzmilion*100000000
+//       a.push(yuzmilion)
+//     }
+//     let onmilion = Math.floor(number / 10000000);
+//     number = number % 10000000;
+//     if (onmilion==0) {
+//       onmilion=''
+//     }else{
+//       onmilion=onmilion*10000000
+//       a.push(onmilion)
+//     }
 
-  let milion = Math.floor(number / 1000000);
-  number = number % 1000000;
-  if (milion==0) {
-    milion=''
-  }else{
-    milion=milion*1000000
-    a.push(milion)
-  }
-  let yuzminglik = Math.floor(number / 100000);
-  number = number % 100000;
-  if (yuzminglik==0) {
-    yuzminglik=''
-  }else{
-    yuzminglik=yuzminglik*100000
-    a.push(yuzminglik)
-  }
-  let onminglik = Math.floor(number / 10000);
-  number = number % 10000;
-  if (onminglik==0) {
-    onminglik=''
-  }else{
-    onminglik=onminglik*10000
-    a.push(onminglik)
-  }
-  let minglik = Math.floor(number / 1000);
-  number = number % 1000;
-  if (minglik==0) {
-    minglik=''
-  }else{
-    minglik=minglik*1000
-    a.push(minglik)
-  }
-  let yuzlik = Math.floor(number / 100);
-  number = number % 100;
-  if (yuzlik==0) {
-    yuzlik=''
-  }else{
-    yuzlik=yuzlik*100
-    a.push(yuzlik)
-  }
-  let onlik = Math.floor(number / 10);
-  if (onlik==0) {
-    onlik=''
-  }else{
-    onlik=onlik*10
-    a.push(onlik)
-  }
-  let birlik = number % 10;
-  if (birlik==0) {
-    birlik=''
-  }else{
-    a.push(birlik)
-  }
-  d=a.pop()
-  c=''
-  for (let i = 0; i < a.length; i++) {
-    c+= `${a[i]} + `  
-  }
-return c+d
+//   let milion = Math.floor(number / 1000000);
+//   number = number % 1000000;
+//   if (milion==0) {
+//     milion=''
+//   }else{
+//     milion=milion*1000000
+//     a.push(milion)
+//   }
+//   let yuzminglik = Math.floor(number / 100000);
+//   number = number % 100000;
+//   if (yuzminglik==0) {
+//     yuzminglik=''
+//   }else{
+//     yuzminglik=yuzminglik*100000
+//     a.push(yuzminglik)
+//   }
+//   let onminglik = Math.floor(number / 10000);
+//   number = number % 10000;
+//   if (onminglik==0) {
+//     onminglik=''
+//   }else{
+//     onminglik=onminglik*10000
+//     a.push(onminglik)
+//   }
+//   let minglik = Math.floor(number / 1000);
+//   number = number % 1000;
+//   if (minglik==0) {
+//     minglik=''
+//   }else{
+//     minglik=minglik*1000
+//     a.push(minglik)
+//   }
+//   let yuzlik = Math.floor(number / 100);
+//   number = number % 100;
+//   if (yuzlik==0) {
+//     yuzlik=''
+//   }else{
+//     yuzlik=yuzlik*100
+//     a.push(yuzlik)
+//   }
+//   let onlik = Math.floor(number / 10);
+//   if (onlik==0) {
+//     onlik=''
+//   }else{
+//     onlik=onlik*10
+//     a.push(onlik)
+//   }
+//   let birlik = number % 10;
+//   if (birlik==0) {
+//     birlik=''
+//   }else{
+//     a.push(birlik)
+//   }
+//   d=a.pop()
+//   c=''
+//   for (let i = 0; i < a.length; i++) {
+//     c+= `${a[i]} + `  
+//   }
+// return c+d
 
-//   return `${milion}:${yuzminglik}:${onminglik}:${minglik}:${yuzlik}:${onlik}:${birlik}`;
-}
-console.log(humanReadable(92093403034573));
+// //   return `${milion}:${yuzminglik}:${onminglik}:${minglik}:${yuzlik}:${onlik}:${birlik}`;
+// }
+// console.log(humanReadable(92093403034573));
+
+// function count (string) {  
+//   let cache={};
+//   string.split('').map(v=>cache[v]=cache[v]+1||1)
+//   return cache;
+// }
+// console.log(count(""));
+
+// function twoSum(nums, target) {
+//   for(let i = 0; i < nums.length; i++){
+//     for(let j = 0; j < nums.length; j++){
+//       if(nums[i] + nums[j] === target){
+//         return [i, j]
+//       }
+//     }
+//   }
+//   return null;
+// }
+// console.log(twoSum([335, -202, -853, 565, 708, 348, -391, 540, 541, -763, 376, -348, -844], 1084));
