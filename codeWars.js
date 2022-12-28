@@ -2571,7 +2571,7 @@
 //   d=a.pop()
 //   c=''
 //   for (let i = 0; i < a.length; i++) {
-//     c+= `${a[i]} + `  
+//     c+= `${a[i]} + `
 //   }
 // return c+d
 
@@ -2579,7 +2579,7 @@
 // }
 // console.log(humanReadable(92093403034573));
 
-// function count (string) {  
+// function count (string) {
 //   let cache={};
 //   string.split('').map(v=>cache[v]=cache[v]+1||1)
 //   return cache;
@@ -2598,3 +2598,21 @@
 // }
 // console.log(twoSum([335, -202, -853, 565, 708, 348, -391, 540, 541, -763, 376, -348, -844], 1084));
 
+function high(x) {
+    const words = x.split(' ');
+    const alphabetMap = {};
+    for (let i='a'.charCodeAt(), j = 1; i <= 'z'.charCodeAt(); i++, j++) {
+      alphabetMap[i] = j;
+    }
+    let highestScoringWord = { word: '', score: 0 };
+    words.forEach(w => {
+      const chars = w.split('');
+      const sumOfChars = chars.reduce((count, char) => count + alphabetMap[char.charCodeAt()], 0);
+      if (sumOfChars > highestScoringWord.score) {
+        highestScoringWord = { word: w, score: sumOfChars };
+      }
+    });
+  
+    return highestScoringWord.word;
+  }
+console.log(high("what time are we climbing up the volcano"));
