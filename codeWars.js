@@ -2598,21 +2598,43 @@
 // }
 // console.log(twoSum([335, -202, -853, 565, 708, 348, -391, 540, 541, -763, 376, -348, -844], 1084));
 
-function high(x) {
-    const words = x.split(' ');
-    const alphabetMap = {};
-    for (let i='a'.charCodeAt(), j = 1; i <= 'z'.charCodeAt(); i++, j++) {
-      alphabetMap[i] = j;
-    }
-    let highestScoringWord = { word: '', score: 0 };
-    words.forEach(w => {
-      const chars = w.split('');
-      const sumOfChars = chars.reduce((count, char) => count + alphabetMap[char.charCodeAt()], 0);
-      if (sumOfChars > highestScoringWord.score) {
-        highestScoringWord = { word: w, score: sumOfChars };
-      }
-    });
-  
-    return highestScoringWord.word;
+// function high(x) {
+//     const words = x.split(' ');
+//     const alphabetMap = {};
+//     for (let i='a'.charCodeAt(), j = 1; i <= 'z'.charCodeAt(); i++, j++) {
+//       alphabetMap[i] = j;
+//     }
+//     let highestScoringWord = { word: '', score: 0 };
+//     words.forEach(w => {
+//       const chars = w.split('');
+//       const sumOfChars = chars.reduce((count, char) => count + alphabetMap[char.charCodeAt()], 0);
+//       if (sumOfChars > highestScoringWord.score) {
+//         highestScoringWord = { word: w, score: sumOfChars };
+//       }
+//     });
+
+//     return highestScoringWord.word;
+//   }
+// console.log(high("what time are we climbing up the volcano"));
+
+// function tribonacci(signature, n) {
+//   var trib = signature;
+//   for (i = 3; i < n; i++) {
+//     trib.push(trib[i - 1] + trib[i - 2] + trib[i - 3]);
+//   }
+//   return trib.slice(0, n);
+// }
+
+// console.log(tribonacci([1, 1, 1], 10));
+
+function towerBuilder(nf) {
+  var tower = [];
+  for (var i = 0; i < nf; i++) {
+  tower.push(" ".repeat(nf - i - 1)
+  + "*".repeat((i * 2)+ 1)
+  + " ".repeat(nf - i - 1))
   }
-console.log(high("what time are we climbing up the volcano"));
+  return tower;
+  }
+  console.log(towerBuilder(5));
+
