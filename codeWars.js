@@ -2627,14 +2627,28 @@
 
 // console.log(tribonacci([1, 1, 1], 10));
 
-function towerBuilder(nf) {
-  var tower = [];
-  for (var i = 0; i < nf; i++) {
-  tower.push(" ".repeat(nf - i - 1)
-  + "*".repeat((i * 2)+ 1)
-  + " ".repeat(nf - i - 1))
-  }
-  return tower;
-  }
-  console.log(towerBuilder(5));
+// function towerBuilder(nf) {
+//   var tower = [];
+//   for (var i = 0; i < nf; i++) {
+//   tower.push(" ".repeat(nf - i - 1)
+//   + "*".repeat((i * 2)+ 1)
+//   + " ".repeat(nf - i - 1))
+//   }
+//   return tower;
+//   }
+//   console.log(towerBuilder(5));
 
+animal = ["foz", "ant", "bird", "lion", "wolf", "deer", "dgo"];
+
+// const an = (m) => {
+//   for (let i = 0; i < animal.length; i++) {
+//     c=m.split('').join(' ').match(animal[i].split(''))
+//     console.log(c);
+//   }
+// };
+// console.log(an("dgostcw"));
+
+anm = "d g o s t c w";
+cc = "d ";
+a = anm.match(cc);
+console.log(a);
