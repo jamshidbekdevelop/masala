@@ -2638,17 +2638,29 @@
 //   }
 //   console.log(towerBuilder(5));
 
-animal = ["foz", "ant", "bird", "lion", "wolf", "deer", "dgo"];
+// animal = ["foz", "ant", "bird", "lion", "wolf", "deer", "dgo"];
 
-// const an = (m) => {
-//   for (let i = 0; i < animal.length; i++) {
-//     c=m.split('').join(' ').match(animal[i].split(''))
-//     console.log(c);
-//   }
-// };
-// console.log(an("dgostcw"));
+// // const an = (m) => {
+// //   for (let i = 0; i < animal.length; i++) {
+// //     c=m.split('').join(' ').match(animal[i].split(''))
+// //     console.log(c);
+// //   }
+// // };
+// // console.log(an("dgostcw"));
 
-anm = "d g o s t c w";
-cc = "d ";
-a = anm.match(cc);
-console.log(a);
+// anm = "d g o s t c w";
+// cc = "d ";
+// a = anm.match(cc);
+// console.log(a);
+
+function getCount(str) {
+  vo = ["a", "e", "i", "o", "u"];
+  c = 0;
+  for (let i = 0; i < str.length; i++) {
+    for (let j = 0; j < vo.length; j++) {
+      vo[j] == str[i] && c++;
+    }
+  }
+  return c
+}
+console.log(getCount("abracadabra"));
