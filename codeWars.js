@@ -2653,14 +2653,30 @@
 // a = anm.match(cc);
 // console.log(a);
 
-function getCount(str) {
-  vo = ["a", "e", "i", "o", "u"];
-  c = 0;
-  for (let i = 0; i < str.length; i++) {
-    for (let j = 0; j < vo.length; j++) {
-      vo[j] == str[i] && c++;
+// function getCount(str) {
+//   vo = ["a", "e", "i", "o", "u"];
+//   c = 0;
+//   for (let i = 0; i < str.length; i++) {
+//     for (let j = 0; j < vo.length; j++) {
+//       vo[j] == str[i] && c++;
+//     }
+//   }
+//   return c
+// }
+// console.log(getCount("abracadabra"));
+
+const num = (t) => {
+  c = 1;
+  if (t == 1) {
+    return 1;
+  } else {
+    for (let i = 1; i <t; i++) {
+      console.log(i);
+      console.log(c,'c');
+      // c+i
+      c=c+i
     }
+    return c+1
   }
-  return c
-}
-console.log(getCount("abracadabra"));
+};
+console.log(num(3));
