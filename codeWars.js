@@ -2665,18 +2665,35 @@
 // }
 // console.log(getCount("abracadabra"));
 
-const num = (t) => {
-  c = 1;
-  if (t == 1) {
-    return 1;
-  } else {
-    for (let i = 1; i <t; i++) {
-      console.log(i);
-      console.log(c,'c');
-      // c+i
-      c=c+i
-    }
-    return c+1
-  }
+// const num = (t) => {
+//   c = 1;
+//   if (t == 1) {
+//     return 1;
+//   } else {
+//     for (let i = 1; i <t; i++) {
+//       console.log(i);
+//       console.log(c,'c');
+//       // c+i
+//       c=c+i
+//     }
+//     return c+1
+//   }
+// };
+// console.log(num(3));
+
+let manu = {
+  width: 200,
+  height: 300,
+  title: "My manu",
 };
-console.log(num(3));
+
+function multiplyNumeric(manu) {
+  for (let value in manu) {
+    if (typeof manu[key] == "number") {
+      manu[key] *= 2;
+    }
+  }
+  return manu
+}
+
+console.log(multiplyNumeric(manu));
