@@ -2681,19 +2681,255 @@
 // };
 // console.log(num(3));
 
-let manu = {
-  width: 200,
-  height: 300,
-  title: "My manu",
-};
+// let manu = {
+//   width: 200,
+//   height: 300,
+//   title: "My manu",
+// };
 
-function multiplyNumeric(manu) {
-  for (let value in manu) {
-    if (typeof manu[key] == "number") {
-      manu[key] *= 2;
-    }
-  }
-  return manu
+// function multiplyNumeric(manu) {
+//   for (let value in manu) {
+//     if (typeof manu[key] == "number") {
+//       manu[key] *= 2;
+//     }
+//   }
+//   return manu
+// }
+
+// console.log(multiplyNumeric(manu));
+
+/* javascript program to find first 
+repeating element in arr */
+
+// This function prints the
+// first repeating element in arr
+
+// function printFirstRepeating(arr, n) {
+//   // This will set k=1, if any
+//   // repeating element found
+//   var k = 0;
+//   // max = maximum from (all elements & n)
+//   var max = n;
+//   for (i = 0; i < n; i++) if (max < arr[i]) max = arr[i];
+
+//   // Array a is for storing
+//   // 1st time occurrence of element
+//   // initialized by 0
+//   var a = Array(max + 1).fill(0);
+
+//   // Store 1 in array b
+//   // if element is duplicate
+//   // initialized by 0
+//   var b = Array(max + 1).fill(0);
+//   for (var i = 0; i < n; i++) {
+//     // Duplicate element found
+//     if (a[arr[i]] != 0) {
+//       b[arr[i]] = 1;
+//       k = 1;
+//       continue;
+//     }
+//     // storing 1st occurrence of arr[i]
+//     else a[arr[i]] = i + 1;
+//   }
+
+//   if (k == 0) document.write("No repeating element found");
+//   else {
+//     var min = max + 1;
+
+//     // trace array a & find repeating element
+//     // with min index
+//     for (i = 0; i < max + 1; i++)
+//       if (a[i] != 0 && min > a[i] && b[i] != 0) min = a[i];
+//     document.write(arr[min - 1]);
+//   }
+//   document.write("<br/>");
+// }
+
+// // Driver code
+
+// var arr = [10, 5, 3, 4, 3, 5, 6];
+
+// var N = arr.length;
+// printFirstRepeating(arr, N);
+
+// str = "ABBCACF";
+
+// const findDuplicate = (str) => {
+//   array=str.split('')
+//   a=''
+//   for (let i = 0; i < array.length; i++) {
+//     for (let j = 0; j < array.length; j++) {
+
+//     }
+//   }
+
+// };
+// console.log(findDuplicate(str));
+
+// var numbers4 = [5, 2, 3, 4, 2, 6, 7, 1, 2, 3];
+// var firstIndex = "";
+// function findDuplicates(numbers4) {
+//   for (var a = 0; a < numbers4.length; a++) {
+//     for (var b = a + 1; b < numbers4.length; b++) {
+//       if (numbers4[a] === numbers4[b])
+//         firstIndex = numbers4.indexOf(numbers4[a]);
+//       // return firstIndex
+//       break;
+//     }
+//   }
+//   return firstIndex;
+// }
+
+// console.log(findDuplicates(numbers4));
+
+// var numbers4 = [5, 2, 3, 4, 2, 6, 7, 1, 2, 3];
+// var firstIndex = "";
+// for (var a = 0; a < numbers4.length; a++) {
+//   for (var b = a + 1; b < numbers4.length; b++) {
+//     // console.log(numbers4[a]);
+//     // console.log(numbers4[b],'b');
+//     if (numbers4[a] === numbers4[b]) {
+//       console.log(numbers4.indexOf(2));
+//       break;
+//     }
+//   }
+// }
+// console.log(firstIndex);
+
+// const firstDupeIndex = (list) => {
+//   const dict = {};
+
+//   for (const [index, value] of list.entries()) {
+//     if (dict.hasOwnProperty(value)) {
+//       return dict[value];
+//     }
+
+//     dict[value] = index;
+//   }
+
+//   return -1;
+// };
+
+// console.log(
+//   firstDupeIndex(['a', 'b', 'c', 'd', 'e', 'b', 'z', 't', 'c'])
+// );
+
+// var numbers4 = [5, 2, 3, 4, 4, 6, 7, 1, 2, 3];
+
+// function findFirstDuplicateIndex(arr){
+//   var found = {};
+
+//   for (var a = 0, aa = arr.length; a < aa ; a++) {
+//     if (found[arr[a]])
+//       return found[arr[a]];
+
+//     found[numbers4[a]] = a
+//   }
+// }
+
+// console.log(findFirstDuplicateIndex(numbers4));
+
+// var numbers4 = [5, 2, 3, 4,4, 2, 6, 7, 1, 2, 3];
+
+// function firstDuplicate(arr) {
+//   let elementSet = new Set();
+// console.log(elementSet);
+//   for (let i = 0; i < arr.length; i++) {
+//     console.log(elementSet.has(arr[i]));
+//       if (elementSet.has(arr[i])) return arr[i];
+//       elementSet.add(arr[i]);
+//   }
+
+//   return "No duplicates here!";
+// }
+
+// var numbers4 = ['a', 'b', 'c', 'a', 'b'];
+
+// const findFirstDuplicate = (list) => {
+//   for (let i = 0; i < list.length; i++) {
+//     // console.log(Math.abs(list[i])-1);
+//     if (list[Math.abs(list[i]) - 1] < 0) {
+// // console.log(list[Math.abs(list[i]) - 1]);
+//       return Math.abs(list[i]);
+//     } else {
+//       list[Math.abs(list[i]) - 1] = -list[Math.abs(list[i]) - 1];
+//     }
+//   }
+//   return -1;
+// };
+// console.log(findFirstDuplicate(numbers4));
+
+// let arr = "ABBACC";
+// //for loop;if break;
+
+// var findDup = function (arr) {
+//   var a = 0,
+//     found = {};
+//   while (!found[arr[a]]) found[arr[a++]] = true;
+//   return arr[a];
+// };
+// var findDup = function (arr) {
+//   return (
+//     arr.split('').reduce(function (a, b) {
+//       return a + b;
+//     }) -
+//     (arr.length * (arr.length - 1)) / 2
+//   );
+// };
+// findDup = (a) => a.split('').find((e, i) => i != a.lastIndexOf(e));
+
+// function findDup(arr) {
+//   var n = arr.length,
+//     total = arr.split('').reduce((ctr, val) => ctr + val, 0),
+//     expected = (n * (n - 1)) / 2;
+//   return total - expected;
+// }
+// const findDup = (arr) => {
+//   return (
+//     arr
+//       .split("")
+//       .sort()
+//       // .filter((v, i, arr) => v === arr[i + 1]) * 1
+//   );
+// };
+
+// let arr = "CACBABACC";
+// //for loop;if break;
+
+// var findDup = function (arr) {
+//   c = "";
+//   let found = {};
+//   for (let i = 0; i < arr.length; i++) {
+//     if (!found[arr[i]]) {
+//       found[arr[i]] = true;
+//     } else {
+//       return arr[i];
+//     }
+//   }
+// };
+// console.log(findDup(arr));
+
+function getLength(arr){
+  //return length of arr
+  return arr.length
 }
-
-console.log(multiplyNumeric(manu));
+function getFirst(arr){
+  //return the first element of arr
+  return arr.shift()
+}
+function getLast(arr){
+  //return the last element of arr
+  return arr.pop()
+}
+function pushElement(arr){
+  var el=1;
+  //push el to arr
+  
+  return arr.push(el).length
+}
+function popElement(arr){
+  //pop an element from arr
+  arr.pop()
+  return `${arr.length}`
+}
+console.log(popElement([1,2,3]));
