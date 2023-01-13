@@ -2909,27 +2909,41 @@ repeating element in arr */
 // };
 // console.log(findDup(arr));
 
-function getLength(arr){
-  //return length of arr
-  return arr.length
-}
-function getFirst(arr){
-  //return the first element of arr
-  return arr.shift()
-}
-function getLast(arr){
-  //return the last element of arr
-  return arr.pop()
-}
-function pushElement(arr){
-  var el=1;
-  //push el to arr
-  
-  return arr.push(el).length
-}
-function popElement(arr){
-  //pop an element from arr
-  arr.pop()
-  return `${arr.length}`
-}
-console.log(popElement([1,2,3]));
+// function getLength(arr){
+//   //return length of arr
+//   return arr.length
+// }
+// function getFirst(arr){
+//   //return the first element of arr
+//   return arr.shift()
+// }
+// function getLast(arr){
+//   //return the last element of arr
+//   return arr.pop()
+// }
+// function pushElement(arr){
+//   var el=1;
+//   //push el to arr
+
+//   return arr.push(el).length
+// }
+// function popElement(arr){
+//   //pop an element from arr
+//   arr.pop()
+//   return `${arr.length}`
+// }
+// console.log(popElement([1,2,3]));
+arr = ["webbrain", "academy"];
+
+var findDup = function (arr) {
+  arr = arr.join("").split("");
+  c = 0;
+  let found = {};
+  for (let i = 0; i < arr.length; i++) {
+    if (found[arr[i]]) {
+      found[arr[i]] += 1;
+    } else found[arr[i]] = 1;
+  }
+  return found;
+};
+console.log(findDup(arr));
