@@ -2935,15 +2935,15 @@ repeating element in arr */
 // console.log(popElement([1,2,3]));
 // arr = ["webbrain", "academy"];
 
-// var findDup = function (arr) {
-//   arr = arr.join("").split("");
-//   c = 0;
-//   let found = {};
-//   for (let i = 0; i < arr.length; i++) {
-//     if (found[arr[i]]) {
-//       found[arr[i]] += 1;
-//     } else found[arr[i]] = 1;
-//   }
-//   return found;
-// };
-// console.log(findDup(arr));
+var findDup = function (arr) {
+  arr = arr.join("").split("");
+  c = 0;
+  let found = {};
+  for (let i = 0; i < arr.length; i++) {
+    if (found[arr[i]]) {
+      found[arr[i]] += 1;
+    } else found[arr[i]] = 1;
+  }
+  return found;
+};
+console.log(findDup(arr));
