@@ -2947,3 +2947,27 @@ repeating element in arr */
 //   return found;
 // };
 // console.log(findDup(arr));
+
+// function mango(quantity, price) {
+//   for (let i = 0; i < quantity; i++) {
+//     if (quantity / 3 == Math.round(quantity / 3)) {
+//       return (quantity - quantity / 3) * price;
+//     } else if (quantity / 2 == Math.round(quantity / 2)) {
+//       return (quantity - quantity / 2) * price;
+//     }
+//   }
+// }
+
+// function mango(quantity, price){
+//     let totalCost = 0;
+//       while(quantity > 0){
+//         if(quantity > 2){
+//           quantity -= 3;
+//           totalCost += 2 * price;
+//         }else{
+//           totalCost +=  price;
+//           quantity -=1;
+//         }
+//       }
+//       return totalCost;
+    // }/
