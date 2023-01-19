@@ -2970,4 +2970,18 @@ repeating element in arr */
 //         }
 //       }
 //       return totalCost;
-    // }/
+// }/
+
+// obj = {
+//   id: 1,
+//   studn: [
+//     {
+//       ll: "dsfsfsf",
+//       ld: "sdsd",
+//     },
+//   ],  
+// };
+
+// console.log(obj.studn=[{id:'123'}, {asdf:'sdf'}]);
+
+// console.log(obj);
