@@ -2979,9 +2979,46 @@ repeating element in arr */
 //       ll: "dsfsfsf",
 //       ld: "sdsd",
 //     },
-//   ],  
+//   ],
 // };
 
 // console.log(obj.studn=[{id:'123'}, {asdf:'sdf'}]);
 
 // console.log(obj);
+// a2 = ["lively", "alive", "harp", "sharp", "armstrong"];
+
+// // a1 = ["xyz", "live", "strong"];
+// a1 = ["live", "strong", "arp"]
+// function inArray(array2, array1) {
+//   c = [];
+// //   while (condition) {
+
+// //   }
+//   for (let i = 0; i < array1.length; i++) {
+//     for (let j = 0; j < array2.length; j++) {
+//         // console.log(c,'s');
+//         // console.log(array1[i]);
+//         // console.log(array2[j], 'array2[j]');
+//       array1[i].includes(array2[j]) && c.push(array2[j]);
+//     }
+//   }
+// //   console.log(c);
+//   return [...new Set(c)];
+// }
+
+// console.log(inArray(a1, a2));
+
+function wave(str){
+    let waveArr = [];
+    for(let i = 0; i < str.length; i++) {
+      let letter = str[i];
+      if (letter === " ") {
+        continue;
+      } else {
+        waveArr.push(str.slice(0, i) + letter.toUpperCase() + str.slice(i + 1))
+      } 
+    }
+    return waveArr;
+  }
+
+console.log(wave(" hello "));
